@@ -16,6 +16,10 @@ function draw() {
 }
 
 function touchEnded(){
-  left +=1;
-  right = mouseX
+  if (mouseX < windowWidth/2){
+    left +=1;
+  }
+  if (mouseX > windowWidth/2){
+    right +=1;
+  }
 }
