@@ -12,8 +12,10 @@ function draw() {
   fill('white')
   text(left,windowWidth/4,100)
   text(right,(windowWidth/4)+(windowWidth/2),100)
+  
 }
 
 function touchEnded(){
   left +=1;
+  right = mouseX
 }
