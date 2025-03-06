@@ -24,10 +24,5 @@ function mouseClicked(){
 }
 
 function touchEnded(){
-  if (mouseX < windowWidth/2){
-    left += 1;
-  }
-  if (mouseX > windowWidth/2){
-    right += 1;
-  }
+  left +=1;
 }
