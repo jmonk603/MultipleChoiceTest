@@ -1,11 +1,24 @@
+var left = 0;
+var right = 0;
+
 function setup() {
-    var canvas = createCanvas(800, 800);
-    canvas.parent("p5container");
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-    background(220);
+  background(0);
+  
+  textSize(25)
+  fill('white')
+  text(left,windowWidth/4,100)
+  text(right,(windowWidth/4)+(windowWidth/2),100)
+}
 
-    fill(255, 255, 255);
-    ellipse(400, 400, 200);
+function mouseClicked(){
+  if (mouseX < windowWidth/2){
+    left += 1;
+  }
+  if (mouseX > windowWidth/2){
+    right += 1;
+  }
 }
