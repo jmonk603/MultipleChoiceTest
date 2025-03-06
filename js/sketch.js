@@ -1,31 +1,19 @@
-// On a touchscreen device, touch the canvas using one or more fingers
-// at the same time.
-
-let value = 0;
+var left = 0;
+var right = 0;
 
 function setup() {
-  createCanvas(100, 100);
-
-  describe(
-    'A gray square with a black square at its center. The inner square switches color between black and white each time the user stops touching the screen.'
-  );
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(200);
-
-  // Style the square.
-  fill(value);
-
-  // Draw the square.
-  square(25, 25, 50);
+  background(0);
+  
+  textSize(25)
+  fill('white')
+  text(left,windowWidth/4,100)
+  text(right,(windowWidth/4)+(windowWidth/2),100)
 }
 
-// Toggle colors when a touch ends.
-function touchEnded() {
-  if (value === 0) {
-    value = 255;
-  } else {
-    value = 0;
-  }
+function touchEnded(){
+  left +=1;
 }
